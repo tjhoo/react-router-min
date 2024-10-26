@@ -13,6 +13,9 @@
         "name": "@react-router/dev"
       }
     ],
-    "rootDirs": [".", "./.react-router/types"]
+    "rootDirs": [".", "./.react-router/types"],
+    "strict": true,
+    "target": "ES2022",
+    "types": ["@react-router/node", "vite/client"]
   }
 }
