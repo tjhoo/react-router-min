@@ -1,19 +1,12 @@
-import { Links, Outlet, Scripts, ScrollRestoration } from "react-router";
-import stylesheet from "~/tailwind.css?url";
-import type { Route } from "./+types/root";
+import { Outlet, Scripts, ScrollRestoration } from "react-router";
 import "./tailwind.css";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
-
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Links />
       </head>
       <body>
         {children}
@@ -22,10 +15,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </body>
     </html>
   );
-};
+}
 
-const App = () => {
+export default function App() {
   return <Outlet />;
-};
-
-export default App;
+}
