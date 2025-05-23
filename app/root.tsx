@@ -1,6 +1,7 @@
 import { Links, Outlet, Scripts, ScrollRestoration } from "react-router";
 import stylesheet from "~/tailwind.css?url";
 import type { Route } from "./+types/root";
+import "./tailwind.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
