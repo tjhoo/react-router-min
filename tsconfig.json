@@ -2,20 +2,15 @@
   "include": ["**/*.ts", "**/*.tsx", ".react-router/types/**/*"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "paths": {
       "~/*": ["./app/*"]
     },
-    "plugins": [
-      {
-        "name": "@react-router/dev"
-      }
-    ],
     "rootDirs": [".", "./.react-router/types"],
     "strict": true,
-    "target": "ES2022",
-    "types": ["@react-router/node", "vite/client"]
+    "types": ["node", "vite/client"]
   }
 }
